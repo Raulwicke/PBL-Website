@@ -1,0 +1,47 @@
+<DOCTYPE HTML5>
+<html>
+	<head>
+		<title> Phi Beta Lamba - Hompage </title>
+		<link rel = "stylesheet" type = "text/css" href = "pblStyle.css"> 
+		
+	</head>
+	<body>
+	<div>
+		<div id = "navDiv">
+			<ul class="topnav" id="myTopnav">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#news">News</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<li><a href="#about">About</a></li>
+			</ul>
+		</div>
+		<div id = "contentDiv">
+				<h1 class="maristStyle"> Marist College Phi Beta Lambda </h1>
+				<div class="photoRevolve">
+					<img class="mySlides" src="_images/coffee.jpg">
+					<img class="mySlides" src="_images/sound.jpg">
+					<img class="mySlides" src="_images/workbench.jpg">
+					<img class="mySlides" src="_images/chicago.jpg">
+				</div>
+		</div>
+	</div>
+	<script>
+		//script or making 
+		var slideIndex = 0;
+		carousel();
+
+		function carousel() {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none"; 
+			}
+			slideIndex++;
+			if (slideIndex > x.length) {slideIndex = 1} 
+				x[slideIndex-1].style.display = "block"; 
+			setTimeout(carousel, 2000); // Change image every 2 seconds
+			}
+		</script>
+	</body>
+
+</html>
